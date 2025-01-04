@@ -39,7 +39,7 @@ body {
   color: hsl(229, 6%, 66%);
 }
 .container .top-container h1 + h1 {
-  font-size: clamp(1.3rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.5rem);
   font-weight: 600;
   color: hsl(234, 12%, 34%);
   margin: 0.5rem 0 1rem;
