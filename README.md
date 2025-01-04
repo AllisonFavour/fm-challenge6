@@ -27,28 +27,33 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Github repo to the code for the challenge](https://github.com/AllisonFavour/fm-challenge5)
-- Live Site URL: [Vercel link to view the challenge](https://product-preview-card-component-five-zeta.vercel.app/)
+- Solution URL: [Github repo to the code for the challenge](https://github.com/AllisonFavour/fm-challenge6)
+- Live Site URL: [Vercel link to view the challenge](https://fm-challenge6.vercel.app/)
 
 ## My process
 
 Started by using HTML to give the structure of the layout and having the CSS styling in mind.
 
-my HTML structure consists of main tag which is the parent element and also a child and only element to the body tag. I made use of div with the class name of .main-container
+I made use of the div with the class name of .container which is the parent element to the rest of the element and simultaneously the the child to the body element.
+The .container has three child elements with the class name of .top-container, .bottom-container and footer
+The top container houses the two h2 and p elements, siblings to the parent .top-container
+The .bottom-container has child elements which all share the class name .cards, each .cards element has two child elements which are .content and .img.
+Then for the footer which is a sibling to .top-container and .bottom-container
 
-The .main-container is a parent to two div which are named respectively as .img and .card-content, the reason behind this particular structure is to effectively use the css display: flex property and value to achieve the provided design preview.
+For my styling i chose SASS as my tool, this enables nesting, variables and lots more feature
+I imported poppins from google fonts and then made use of the css * reset to reset the margin, padding and box-sizing.
+Afterwards i created variables for colors and fonts to be used in the project as guided by the style guide markdown file provided by the frontend mentor challenge file.
+I made use of display flex on the body to centralize all the elements initially 
 
-The .img container is used to display the image on the left for desktop view and at the top for mobile view then the .card-content is on the right for desktop view and bottom for mobile view.
+For the bottom container i made use of display: grid and grid-template-column to achieve the layout as provided from the design file, i also added media query to apply the display grid once the screen size is equal to 650px or higher, which is min-width: 650px (applies from a minimum width of 650 and above) 
 
-I used the desktop first approach to get the structure and styling looking close to the provided design preview, then i made use of media query to handle for a max-width of 600, using max-width means it will apply to a maximum of 600px and below
-
-Making use of the background-image property i was able to use two images for the desktop and mobile view through media query
+Then for the footer element which is a parent to the p tag with the class name of .footer-p, i made use of min-width to either centralize it for a maximum width of 650px and below, and then place at the bottom-left from 650px and above
 
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties and Flexbox
+- CSS custom properties and Flexbox and Grid
 
 
 
@@ -61,12 +66,14 @@ I learnt it is very important to visualize the HTML structure closely that will 
 I learnt to use SASS (Syntactically Awesome StyleSheets), i had to install Live Sass Compiler which help watch our changes and spot error and then gets compiled to a vanilla CSS file.
 Making use of SASS allows some enhanced styling features, i was able to make use of t@ directive which is @import to import fonts from google font, i also learnt and made use variables to store colors and fonts, then i did nesting to help class and structure my elements for styling.
 
-I relearnt how to select elements for styling using :first-of-type, :last-of-type and :nth-of-type() also relearnt media queries
+I learnt about css grid to achieve the desired output and also the clamp() property thats takes three argument, first argument takes a minimum value for the size of a font, second argument takes a viewport width and the third argument takes a maximum value for the size of the font. Making use of this processes reduced my need to use more media queries
+
+I relearnt an easier way to use media query alongside the corresponding code instead of placing all the media queries at the bottom.
 
 
 ### Continued development
 
-Add accessibility feature and ensure its responsiveness to a variety of screens
+Ensure its responsiveness to a variety of screens
 
 
 
@@ -79,4 +86,4 @@ Add accessibility feature and ensure its responsiveness to a variety of screens
 
 ## Acknowledgments
 
-Thanks to myself for starting and finishing this particular project, also thanks to chatgpt and claude ai for the quick reminder and providing code suggestions to boost ideas and help learn on the go.
+Thanks to myself for starting and finishing this particular project, also thanks to chatgpt and claude ai for the quick reminder and providing code suggestions to boost ideas and help learn on the go. What a time to be alive!
