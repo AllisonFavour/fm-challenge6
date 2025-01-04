@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 15px;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  font-family: "Poppins";
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.container .top-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.3;
+}
+.container .top-container h2:first-of-type {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+}
+.container .top-container h2 + h2 {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  margin: 0.5rem 0 1rem;
+}
+.container .top-container p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: hsl(229, 6%, 66%);
+  font-weight: 400;
+}
+.container .bottom-container {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 650px) {
+  .container .bottom-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "supervisor builder calculator" "supervisor karma calculator";
+  }
+  .container .bottom-container .supervisor {
+    grid-area: supervisor;
+    align-self: center;
+  }
+  .container .bottom-container .builder {
+    grid-area: builder;
+  }
+  .container .bottom-container .karma {
+    grid-area: karma;
+  }
+  .container .bottom-container .calculator {
+    grid-area: calculator;
+    align-self: center;
+  }
+}
+.container .bottom-container .cards {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(163, 165, 174, 0.2);
+}
+.container .bottom-container .cards .content h3 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 0.5rem;
+}
+.container .bottom-container .cards .content p {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 1rem;
+}
+.container .bottom-container .cards .img {
+  text-align: right;
+}
+.container .bottom-container .cyan {
+  border-top: 3px solid hsl(180, 62%, 55%);
+}
+.container .bottom-container .red {
+  border-top: 3px solid hsl(0, 78%, 62%);
+}
+.container .bottom-container .orange {
+  border-top: 3px solid hsl(34, 97%, 64%);
+}
+.container .bottom-container .blue {
+  border-top: 3px solid hsl(212, 86%, 64%);
+}
+@media (max-width: 650px) {
+  .container .footer-p {
+    text-align: center;
+    margin-block-start: 20px;
+  }
+}/*# sourceMappingURL=index.css.map */
